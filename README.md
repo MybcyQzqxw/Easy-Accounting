@@ -1,6 +1,6 @@
 # Easy Accounting
 
-一个用于快速处理和优化URDF（Unified Robot Description Format）文件的Python工具，提供图形化用户界面，支持URDF数据替换和网格简化功能。
+一个用于快速处理财务记账的Python工具，提供图形化用户界面。
 
 ## 安装说明
 
@@ -14,11 +14,19 @@
 #### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/MybcyQzqxw/Fast-URDF.git
-cd Fast-URDF
+git clone https://github.com/MybcyQzqxw/Easy-Accounting.git
+cd Easy-Accounting
 ```
 
-#### 2. 从源代码构建
+#### 2. 配置学生数据文件
+
+```bash
+# 复制示例文件并编辑
+copy students_data.txt.example students_data.txt
+# 然后编辑 students_data.txt，按照格式填入学生数据
+```
+
+#### 3. 从源代码构建
 
 ```bash
 ./build.bat  # 需要在python环境下运行
