@@ -1,3 +1,6 @@
+# 版本信息
+__version__ = "1.2"
+
 import os
 import re
 import sys
@@ -483,49 +486,26 @@ def startup_information_excel_document_path(information_excel_document_path):
         ws.cell(row=2, column=2, value="姓名")  # 第二行第二列为“姓名”
         ws.cell(row=2, column=3, value="学号")  # 第二行第三列为“学号”
 
-        # 原始数据（制表符分隔）
-        student_data_str = """
-        孙超	3120230145
-        赵凌萱	3120205096
-        张雨	3120240161
-        张锦涛	3120215119
-        赵清锐	3120220164
-        冯一鸣	3120230148
-        张锦埭	3120215121
-        李鸣原	3120225094
-        袁志诚	3120220162
-        夏琪琪	3220230234
-        徐浩琛	3120235413
-        谢光强	3120225085
-        侯海东	3120240147
-        杜沂东	3220225051
-        刘晓峰	3120235419
-        董宸呈	3120195094
-        刘嘉仪	3120240150
-        韩涛	3120235075
-        孟祥    3120215100
-        漆桁博	3120235420
-        施瓦	3820231041
-        马晓帅	3220215026
-        齐皓祥	3120215098
-        李国庆	3220215028
-        李超	3220205024
-        周子顺	3120245174
-        张袁熙	3220205021
-        张健林	1120213079
-        张康成	3220240384
-        吴嘉豪	3120225109
-        刘浩洲	3220215025
-        刘旭航	3120245125
-        """
-
-        # 将数据按行切分，然后按制表符拆分每行
+        # 从外部文件读取学生数据
+        student_data_file = resource_path("students_data.txt")
         student_data = []
-        for line in student_data_str.strip().split('\n'):
-            # 拆分每行并确保每行有两项（姓名和学号）
-            parts = line.split('\t')
-            if len(parts) == 2:  # 确保每行有姓名和学号
-                student_data.append(tuple(parts))
+        
+        try:
+            with open(student_data_file, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line:  # 跳过空行
+                        parts = line.split('\t')
+                        if len(parts) == 2:  # 确保每行有姓名和学号
+                            student_data.append(tuple(parts))
+        except FileNotFoundError:
+            print(f"错误：未找到学生数据文件 students_data.txt")
+            print(f"请参考 students_data.txt.example 创建该文件")
+            print(f"文件格式：每行一个学生，姓名和学号用制表符分隔")
+            raise
+        except Exception as e:
+            print(f"错误：读取学生数据文件时出错：{str(e)}")
+            raise
 
         # 填入数据（从第三行开始，第二列为姓名，第三列为学号）
         for index, (student_name, student_id) in enumerate(student_data, start=3):
@@ -2716,7 +2696,7 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         # 主窗口标题
-        self.setWindowTitle("Easy Accounting 1.1 -- by Mxqwthl")
+        self.setWindowTitle(f"Easy Accounting {__version__} -- by Mxqwthl")
         self.setGeometry(200, 200, 371, 600)  # 主窗口位置和大小
         # 设置窗口的最小宽度和高度
         self.setMinimumSize(260, 460)

@@ -22,6 +22,9 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# Sensitive data
+students_data.txt
+
 # Virtual environments
 myenv/
 venv/
