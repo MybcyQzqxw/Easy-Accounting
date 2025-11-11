@@ -1,0 +1,226 @@
+QWidget {
+    font-size: 16px;
+    color: #333333;
+    font-family: 'Microsoft YaHei';
+    background-color: #FDE6E0;
+}
+
+QPushButton {
+    color: #666666;
+    height: 30px;
+}
+
+QPushButton:hover {
+    color: #333333;
+}
+
+QLineEdit {
+    background-color: #FFFFFF;
+    height: 30px;
+}
+
+QPushButton#clear_button {
+    margin: 10px;
+    margin-top: 5px;
+    height: 50px;
+    background-color: #E1E3FE;
+    border: 3px solid #DCE2F1;
+    border-top: 3px solid #E9EBFE;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+QPushButton#clear_button:hover {
+    background-color: #DBDDFA;
+}
+
+QPushButton#clear_button:pressed {
+    background-color: #D9DBF8;
+}
+
+QPushButton#submit_button {
+    margin: 10px;
+    margin-top: 5px;
+    height: 50px;
+    background-color: #C7EDCC;
+    border: 3px solid #CCE8CF;
+    border-top: 3px solid #CFF4C3;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+QPushButton#submit_button:hover {
+    background-color: #C1E7C6;
+}
+
+QPushButton#submit_button:pressed {
+    background-color: #BEE4C3;
+}
+
+QPushButton#create_button {
+    margin: 10px;
+    margin-top: 5px;
+    height: 35px;
+    background-color: #E1E3FE;
+    border: 3px solid #DCE2F1;
+    border-top: 3px solid #E9EBFE;
+    border-radius: 17px;
+    font-size: 20px;
+}
+
+QPushButton#create_button:hover {
+    background-color: #DBDDFA;
+}
+
+QPushButton#create_button:pressed {
+    background-color: #D9DBF8;
+}
+
+QPushButton#export_button {
+    margin: 10px;
+    margin-top: 5px;
+    height: 35px;
+    background-color: #C7EDCC;
+    border: 3px solid #CCE8CF;
+    border-top: 3px solid #CFF4C3;
+    border-radius: 17px;
+    font-size: 20px;
+}
+
+QPushButton#export_button:hover {
+    background-color: #C1E7C6;
+}
+
+QPushButton#export_button:pressed {
+    background-color: #BEE4C3;
+}
+
+QPushButton#check_button {
+    margin: 10px;
+    margin-top: 5px;
+    height: 35px;
+    background-color: #FAF9DE;
+    border: 3px solid #F5F8D1;
+    border-top: 3px solid #FFFFE6;
+    border-radius: 17px;
+    font-size: 20px;
+}
+
+QPushButton#check_button:hover {
+    background-color: #F3F2D7;
+}
+
+QPushButton#check_button:pressed {
+    background-color: #F1F0D5;
+}
+
+QTextEdit#main_text {
+    border: none;
+    margin: 3px;
+    font-size: 15px;
+    color: #333333;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+
+QTextEdit#step1 {
+    border: none;
+    margin-top: 0;
+    color: #333333;
+    font-size: 12px;
+}
+
+QTextEdit#step2 {
+    border: none;
+    margin-top: 10px;
+    border-top: 1px solid #333333;
+    color: #333333;
+    font-size: 12px;
+}
+
+QTextEdit#step3 {
+    border: none;
+    margin-top: 10px;
+    border-top: 1px solid #333333;
+    color: #333333;
+    font-size: 12px;
+}
+
+QTextEdit#destination_input {
+    margin-top: 3px;
+    background-color: #FFFFFF;
+}
+
+QPushButton#add_button {
+    margin: 0 5px;
+    height: 20px;
+    background-color: #C7EDCC;
+    border: 3px solid #CCE8CF;
+    border-top: 3px solid #CFF4C3;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+QPushButton#add_button:hover {
+    background-color: #C1E7C6;
+}
+
+QPushButton#add_button:pressed {
+    background-color: #BEE4C3;
+}
+
+QPushButton#del_button {
+    margin: 0 5px;
+    height: 20px;
+    background-color: #C7EDCC;
+    border: 3px solid #CCE8CF;
+    border-top: 3px solid #CFF4C3;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+QPushButton#del_button:hover {
+    background-color: #C1E7C6;
+}
+
+QPushButton#del_button:pressed {
+    background-color: #BEE4C3;
+}
+
+QPushButton#confirm_button {
+    margin: 9px 3px 3px 3px;
+}
+
+QTextEdit#special_material_input {
+    margin-right: 3px;
+    background-color: #FFFFFF;
+}
+
+QTextEdit#special_material_use_input {
+    margin-left: 3px;
+    background-color: #FFFFFF;
+}
+
+QLineEdit#usr_name_input {
+    margin: 0 3px 0 3px;
+}
+
+QPushButton#save_initial_settings_button {
+    margin: 12px 3px 3px 3px;
+}
+
+QCheckBox#padding_checkbox {
+    margin-left: 3px;
+}
+
+QLineEdit#student_id_input {
+    margin-top: 10px;
+}
+
+QPushButton#student_id_save_button {
+    margin-top: 10px;
+}
+
+QPushButton#restart_all_button {
+    margin-top: 10px;
+}
