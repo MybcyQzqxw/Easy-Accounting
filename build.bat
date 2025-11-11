@@ -42,6 +42,9 @@ if exist "Easy Accounting.spec" (
     del /f /q "Easy Accounting.spec"
 )
 
+echo Cleanup complete!
+echo.
+
 :: Create virtual environment
 echo Creating virtual environment...
 python -m venv myenv
