@@ -1,6 +1,9 @@
 # 版本信息
 __version__ = "1.2"
 
+# 事务类型
+__affair_types__ = "项目汇报、项目评审、设备调试、机器修理、学术交流、材料递送、人员接洽"
+
 import os
 import re
 import sys
@@ -1985,7 +1988,7 @@ def write_taxi_explanation_document(taxi_explanation_document_path, detail_word_
     print_info_explanation_document_add_title('出租车', taxi_explanation_document_path)
 
     # 写入出租车情况说明文档段落
-    explanation_document_add_paragraph(doc, "　　" + student_names_str + "等人需要往返于实验室与" + destination + "等地，进行项目汇报、项目评审、设备调试、机器修理、学术交流、人员接洽等工作。")
+    explanation_document_add_paragraph(doc, "　　" + student_names_str + "等人需要往返于实验室与" + destination + "等地，进行" + __affair_types__ + "等工作。")
     explanation_document_add_blank(doc)
     explanation_document_add_blank(doc)
     explanation_document_add_paragraph(doc, "　　特此说明")
